@@ -45,3 +45,6 @@ Ankh.NoLoad
 
 #Other
 .svn
+
+# BenchmarkDotnet
+BenchmarkDotNet.Artifacts/

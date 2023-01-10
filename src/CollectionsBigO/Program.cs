@@ -1,4 +1,4 @@
 ﻿using BenchmarkDotNet.Running;
 using CollectionsBigO;
 
-BenchmarkRunner.Run<ListBenchmarks>();
+BenchmarkRunner.Run<ListFindBenchmarks>();
