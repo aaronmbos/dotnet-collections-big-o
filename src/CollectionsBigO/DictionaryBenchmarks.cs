@@ -17,11 +17,14 @@ public class DictionaryBenchmarks
         Enumerable.Range(0, Size).ToList().ForEach(i => _cap.Add(i, i));
     }
 
-    [Benchmark]
-    public void DictAdd() => _data?.Add(Size + 1, new Random().Next());
+    // [Benchmark]
+    // public void DictAdd() => _data?.Add(Size + 1, new Random().Next());
+
+    // [Benchmark]
+    // public void CapacityDictAdd() => _cap?.Add(Size + 1, new Random().Next());
 
     [Benchmark]
-    public void CapacityDictAdd() => _cap?.Add(Size + 1, new Random().Next());
+    public int DictIndex() => _data![Size - 10];
 
     [IterationCleanup]
     public void IterationCleanup() => _data = null;

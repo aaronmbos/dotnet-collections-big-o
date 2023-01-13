@@ -15,8 +15,11 @@ public class HashSetBenchmarks
         _data = new HashSet<int>(Enumerable.Range(0, Size));
     }
 
+    // [Benchmark]
+    // public void Remove() => _data?.Remove(Size - 1);
+
     [Benchmark]
-    public void Remove() => _data?.Remove(Size - 1);
+    public void HashSetTryGetValue() => _data?.TryGetValue(Size - 1, out int _);
 
     [IterationCleanup]
     public void Cleanup()
